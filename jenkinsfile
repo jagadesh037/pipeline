@@ -21,23 +21,6 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-        }
-        stage('Four') {
-            parallel {
-                stage('Unit Test') {
-                    steps {
-                        echo "four"
-                    }
-                }
-                stage('Integration test') {
-                    agent {
-                        docker {
-                            reuseNode false
-                            image ;ubuntu'
-                        }
-                    }
-                    steps {
-                    echo "running"
-                    }
+        }  
     }
 }
