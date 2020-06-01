@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+      parallel {
+        stage('git') {
+            steps {
+                echo "jagadeshjenkin"
+            }
+        }
+    }
+  }
+}
