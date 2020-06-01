@@ -1,13 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('intro') {
+        stage('parallel') {
             parallel {
-                stage('git') {
+                stage('intro') {
                     steps {
-                        echo "jagadeshjenkin"
+                        echo "introduce"
                     }
                 }
+                stage('build') {
+                    steps {
+                        echo "build details"
+                    }
+                }
+                stage('Testing') {
+                    steps {
+                        echo "Unit Testing
+                    }
+               }
             }
         }
     }
