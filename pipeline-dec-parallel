@@ -1,12 +1,14 @@
 pipeline {
     agent any
     stages {
-      parallel {
-        stage('git') {
-            steps {
-                echo "jagadeshjenkin"
+        stage('intro') {
+            parallel {
+                stage('git') {
+                    steps {
+                        echo "jagadeshjenkin"
+                    }
+                }
             }
         }
     }
-  }
 }
