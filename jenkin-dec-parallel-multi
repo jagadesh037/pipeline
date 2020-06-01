@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    stages {
+        stage('parallel') {
+            parallel {
+                stage('intro') {
+                    steps {
+                        echo "introduce"
+                    }
+                }
+                stage('build') {
+                    steps {
+                        echo "build details"
+                    }
+                }
+                stage('deploy') {
+                    steps {
+                        echo "deploy"
+                    }
+               }
+                stage('integration') {
+                    steps {
+                        echo "integration"
+                    }
+               }               
+                stage('Testing') {
+                    steps {
+                        echo "Unit Testing"
+                    }
+               }
+            }
+        }
+    }
+}
