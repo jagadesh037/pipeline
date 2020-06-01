@@ -1,10 +1,20 @@
 pipeline {
     agent any
-    stages{
-        stage('git') {
+    stages {
+        stage('intro') {
             steps {
-                echo "jagadeshjenkin"
+                echo "introduce"
             }
+        }
+        stage('build') {
+            steps {
+                echo "build details"
+            }
+        }
+        stage('Testing') {
+            steps {
+                echo "Unit Testing"
+            }            
         }
     }
 }
